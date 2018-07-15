@@ -21,7 +21,11 @@ void setup(){
 
 void draw() {  
   background(0);
+}
+
+void mouseReleased() {
   c = cp5.get(ColorWheel.class,"wheel").getRGB();
   cs = "#" + hex(c, 6); // Prepares a string to be sent to arduino. The '#' is used to we can identify we're receiving a color
-  serialP.write(cs);
+  println(cs);
+  serialP.write(cs);  // writes to arduino
 }
