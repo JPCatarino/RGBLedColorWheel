@@ -22,3 +22,4 @@ A RGB LED
 ## Acknowledgments
 
 * Inspired by [Make: Getting Started with Arduino](https://www.amazon.co.uk/Make-Getting-Electronics-Prototyping-Platform/dp/1449363334)
+* [Paulo Vasconcelos](https://github.com/Karkanius) - who showed this new world to me
