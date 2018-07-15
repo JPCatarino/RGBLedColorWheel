@@ -12,6 +12,8 @@ To use this app, you'll need, at least:
 A Arduino Uno Rev3 
 A RGB LED
 ```
+## Known Bugs
+LED doesn't light up exactly with the chosen color (but somewhat close)
 
 ## Built With
 
