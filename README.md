@@ -25,7 +25,7 @@ Build the circuit. Upload the Arduino sketch to your microcontroller, and then e
 This is how i built the circuit, but you may find a better way.
 ![Circuit Scheme](https://i.imgur.com/07y00fz.png)
 ## Known Bugs
-LED doesn't light up exactly with the chosen color (but somewhat close).
+LED sometimes doesn't light up exactly with the chosen color (but somewhat close).
 
 ## Built With
 
