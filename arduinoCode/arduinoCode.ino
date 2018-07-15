@@ -3,7 +3,11 @@
 const int R_LED = 9;
 const int G_LED = 10;
 const int B_LED = 11;
+const int BUTTON = 12;
 
+int btn = LOW;
+int old_btn = LOW;
+int state = 0;
 byte r = 0;
 byte g = 0;
 byte b = 0;
@@ -13,9 +17,10 @@ char buffer[7];
 
 void setup() {
   Serial.begin(9600);
-  pinMode(R_LED,OUTPUT);
-  pinMode(G_LED,OUTPUT);
-  pinMode(B_LED,OUTPUT);
+  pinMode(R_LED, OUTPUT);
+  pinMode(G_LED, OUTPUT);
+  pinMode(B_LED, OUTPUT);
+  pinMode(BUTTON, INPUT);
 }
 
 void loop() {
@@ -35,9 +40,25 @@ void loop() {
     }
   }
 
+  btn = digitalRead(BUTTON); 
+
+  if ((btn == HIGH) && (old_btn == LOW)){
+    state = 1 - state;
+  }
+
+  old_btn = btn; 
+
+  if (state == 1) { 
   analogWrite(R_LED,r);
   analogWrite(G_LED,g);
   analogWrite(B_LED,b);
+  } else {
+
+    analogWrite(R_LED, 0);  
+    analogWrite(G_LED, 0);
+    analogWrite(B_LED, 0);
+   }
+  
   delay(100);
 }
 
