@@ -18,3 +18,7 @@ A RGB LED
 * [Arduino](https://www.arduino.cc/) 
 * [Processing](https://processing.org/)
 * [ControlP5](http://www.sojamo.de/libraries/controlP5/)
+
+## Acknowledgments
+
+* Inspired by [Make: Getting Started with Arduino](https://www.amazon.co.uk/Make-Getting-Electronics-Prototyping-Platform/dp/1449363334)
