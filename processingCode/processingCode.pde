@@ -15,8 +15,15 @@ void setup(){
   cw = cp5.addColorWheel("wheel",0,0,800);
   // If the first port on Serial.list() is not your Arduino
   // change accordingly
-  String arduinoP = Serial.list()[0];
-  serialP = new Serial(this, arduinoP, 9600);
+  try{
+    String arduinoP = Serial.list()[0];
+    serialP = new Serial(this, arduinoP, 9600);
+  }
+  catch(ArrayIndexOutOfBoundsException e){
+    println("ERROR: No COM port on that index.");
+    printArray(Serial.list());
+    exit();
+  }
 }
 
 void draw() {  
