@@ -49,15 +49,15 @@ void loop() {
   old_btn = btn; 
 
   if (state == 1) { 
-  analogWrite(R_LED,r);
-  analogWrite(G_LED,g);
-  analogWrite(B_LED,b);
-  } else {
-
+    analogWrite(R_LED,r);
+    analogWrite(G_LED,g);
+    analogWrite(B_LED,b);
+  } 
+  else {
     analogWrite(R_LED, 0);  
     analogWrite(G_LED, 0);
     analogWrite(B_LED, 0);
-   }
+  }
   
   delay(100);
 }
